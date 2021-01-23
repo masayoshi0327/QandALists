@@ -26,7 +26,7 @@ struct QuestionView: View {
                     Text("Button")
                 })
                 .sheet(isPresented: $questionData.isNewData, content: {
-                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Sheet Content")/*@END_MENU_TOKEN@*/
+                    QuestionViewNew(questionData: QuestionController())
                 })
             }
             .padding()
