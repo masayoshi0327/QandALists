@@ -14,4 +14,27 @@ class QuestionController : ObservableObject{
     @Published var memo = ""
     @Published var date = Date()
     @Published var isNewData = false
+    
+    func saveQuestion(context : NSManagedObjectContext){
+        
+        let newQuestion = Question(context: context)
+        newQuestion.question = question
+        newQuestion.memo = memo
+        newQuestion.date = date
+        
+        // saving data...
+        
+        do{
+            
+            try context.save()
+            // success means closing view...
+            isNewData.toggle()
+            question = ""
+            memo = ""
+            date = Date()
+        }
+        catch{
+            print(error.localizedDescription)
+        }
+    }
 }

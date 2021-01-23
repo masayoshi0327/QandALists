@@ -22,7 +22,7 @@ struct QuestionViewNew: View {
                 
                 Spacer()
                 
-                Button(action: {}, label: {
+                Button(action: {questionData.saveQuestion(context: context)}, label: {
                     Text("Add")
                 })
             }

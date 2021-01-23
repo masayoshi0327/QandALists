@@ -26,7 +26,7 @@ struct QuestionView: View {
                     Text("Button")
                 })
                 .sheet(isPresented: $questionData.isNewData, content: {
-                    QuestionViewNew(questionData: QuestionController())
+                    QuestionViewNew(questionData: questionData)
                 })
             }
             .padding()
