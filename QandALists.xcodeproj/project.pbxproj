@@ -16,6 +16,8 @@
 		C492FEB425BC0E54009E3F42 /* QandAListsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FEB325BC0E54009E3F42 /* QandAListsUITests.swift */; };
 		C492FEC925BC0FF9009E3F42 /* QandALists.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C492FEC725BC0FF9009E3F42 /* QandALists.xcdatamodeld */; };
 		C492FED325BC11F1009E3F42 /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FED225BC11F1009E3F42 /* QuestionController.swift */; };
+		C492FED825BC13F9009E3F42 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FED725BC13F9009E3F42 /* QuestionView.swift */; };
+		C492FEE525BC142D009E3F42 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FEE425BC142D009E3F42 /* AnswerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		C492FEB525BC0E54009E3F42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C492FEC825BC0FF9009E3F42 /* QandALists.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QandALists.xcdatamodel; sourceTree = "<group>"; };
 		C492FED225BC11F1009E3F42 /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
+		C492FED725BC13F9009E3F42 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		C492FEE425BC142D009E3F42 /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 		C492FECE25BC1164009E3F42 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C492FED725BC13F9009E3F42 /* QuestionView.swift */,
+				C492FEE425BC142D009E3F42 /* AnswerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,8 +292,10 @@
 			files = (
 				C492FED325BC11F1009E3F42 /* QuestionController.swift in Sources */,
 				C492FE9B25BC0E53009E3F42 /* Persistence.swift in Sources */,
+				C492FEE525BC142D009E3F42 /* AnswerView.swift in Sources */,
 				C492FE9425BC0E51009E3F42 /* ContentView.swift in Sources */,
 				C492FE9225BC0E51009E3F42 /* QandAListsApp.swift in Sources */,
+				C492FED825BC13F9009E3F42 /* QuestionView.swift in Sources */,
 				C492FEC925BC0FF9009E3F42 /* QandALists.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

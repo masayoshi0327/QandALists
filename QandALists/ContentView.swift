@@ -12,6 +12,12 @@ struct ContentView: View {
 
     var body: some View {
 
-        Text("Hello")
+        TabView() {
+            
+            QuestionView()
+                .tabItem {Image(systemName: "questionmark")}.tag(1)
+            AnswerView()
+                .tabItem {Image(systemName: "lightbulb")}.tag(2)
+        }
     }
 }
