@@ -13,4 +13,5 @@ class QuestionController : ObservableObject{
     @Published var question = ""
     @Published var memo = ""
     @Published var date = Date()
+    @Published var isNewData = false
 }

@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct QuestionView: View {
+    
+    @StateObject var questionData = QuestionController()
+    
     var body: some View {
-        Text("This is question")
+        VStack{
+
+            Text("This is question")
+            
+            Spacer()
+            
+            HStack{
+                
+                Spacer()
+                
+                Button(action: {questionData.isNewData.toggle()}, label: {
+                    Text("Button")
+                })
+                .sheet(isPresented: $questionData.isNewData, content: {
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Sheet Content")/*@END_MENU_TOKEN@*/
+                })
+            }
+            .padding()
+        }
     }
 }
 
