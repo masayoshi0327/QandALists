@@ -11,7 +11,6 @@ import CoreData
 class QuestionController : ObservableObject{
     
     @Published var question = ""
-    @Published var memo = ""
     @Published var date = Date()
     @Published var isNewData = false
     
@@ -19,7 +18,6 @@ class QuestionController : ObservableObject{
         
         let newQuestion = Question(context: context)
         newQuestion.question = question
-        newQuestion.memo = memo
         newQuestion.date = date
         
         // saving data...
@@ -30,7 +28,6 @@ class QuestionController : ObservableObject{
             // success means closing view...
             isNewData.toggle()
             question = ""
-            memo = ""
             date = Date()
         }
         catch{

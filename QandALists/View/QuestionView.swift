@@ -17,15 +17,22 @@ struct QuestionView: View {
     
     var body: some View {
         VStack{
-
-            Text("This is question")
             
-            NavigationView{
+            HStack{
                 
-                List(results){q in
+                Text("This is question")
+                
+                Spacer()
+                
+            }
+            .padding()
+            ScrollView(showsIndicators: false){
+                
+                LazyVStack(spacing: 20){
                     
-                    NavigationLink(destination: QuestionViewEdit()){
-                        Text(q.question ?? "")
+                    ForEach(results){q in
+                        
+                        QuestionViewList()
                     }
                 }
             }

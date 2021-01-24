@@ -31,18 +31,6 @@ struct QuestionViewNew: View {
             TextField("ここに入力" ,text: $questionData.question)
             
             Divider()
-            
-            HStack{
-                
-                Text("メモ")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                
-                Spacer()
-            }
-            .padding(.horizontal)
-            
-            TextEditor(text: $questionData.memo)
         }
         .padding()
     }
