@@ -6,15 +6,29 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct QuestionView: View {
     
     @StateObject var questionData = QuestionController()
     
+    @FetchRequest(entity: Question.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: true)],animation: .spring()) var results : FetchedResults<Question>
+    @Environment(\.managedObjectContext) var context
+    
     var body: some View {
         VStack{
 
             Text("This is question")
+            
+            NavigationView{
+                
+                List(results){q in
+                    
+                    NavigationLink(destination: QuestionViewEdit()){
+                        Text(q.question ?? "")
+                    }
+                }
+            }
             
             Spacer()
             
