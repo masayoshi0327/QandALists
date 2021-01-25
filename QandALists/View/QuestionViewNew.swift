@@ -28,7 +28,7 @@ struct QuestionViewNew: View {
             }
             .padding(.horizontal)
             
-            TextField("ここに入力" ,text: $questionData.question)
+            TextField("ここに入力" ,text: $questionData.content)
             
             Divider()
         }

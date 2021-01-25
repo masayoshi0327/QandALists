@@ -26,17 +26,29 @@ struct QuestionView: View {
                 
             }
             .padding()
-            ScrollView(showsIndicators: false){
-                
-                LazyVStack(spacing: 20){
+            NavigationView{
+            
+                ScrollView(showsIndicators: false){
                     
-                    ForEach(results){q in
-                        
-                        QuestionViewList()
-                            .contextMenu(ContextMenu(menuItems: {
-                                /*@START_MENU_TOKEN@*/Text("Menu Item 1")/*@END_MENU_TOKEN@*/
-                                /*@START_MENU_TOKEN@*/Text("Menu Item 2")/*@END_MENU_TOKEN@*/
-                            }))
+                    LazyVStack(spacing: 20){
+                    
+                        ForEach(results){q in
+                            
+                            QuestionViewList(content: q.content ?? "", date: q.date ?? Date())
+                                .contextMenu(ContextMenu(menuItems: {
+                                    Button(action: {
+                                        questionData.EditItem(item: q)
+                                    }, label: {
+                                        Text("編集")
+                                    })
+                                    Button(action: {
+                                        context.delete(q)
+                                        try! context.save()
+                                    }, label: {
+                                        Text("削除")
+                                    })
+                                }))
+                        }
                     }
                 }
             }

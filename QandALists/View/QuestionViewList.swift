@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct QuestionViewList: View {
+    
+    var content : String
+    var date : Date
+    
     var body: some View {
         
-        Button(action: {}, label: {
+        NavigationLink(destination: AnswerViewNew()){
+            
             VStack{
                 HStack{
-                    Text("Task")
+                    Text(content)
                         .font(.title2)
                         .foregroundColor(.black)
                     Spacer()
@@ -21,7 +26,7 @@ struct QuestionViewList: View {
                 
                 HStack{
                     Spacer()
-                    Text("date")
+                    Text(date, style: .date)
                         .foregroundColor(.gray)
                 }
             }
@@ -29,12 +34,12 @@ struct QuestionViewList: View {
             .background(Color(#colorLiteral(red: 1, green: 0.97928039, blue: 0.8576300865, alpha: 1)))
             .cornerRadius(20)
             .shadow(radius: 1, x: 3, y: 3)
-        })
+        }
     }
 }
 
 struct QuestionViewList_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionViewList()
+        QuestionViewList(content: "if文の使いかた", date: Date())
     }
 }
