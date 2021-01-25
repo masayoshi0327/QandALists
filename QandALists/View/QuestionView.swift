@@ -33,6 +33,10 @@ struct QuestionView: View {
                     ForEach(results){q in
                         
                         QuestionViewList()
+                            .contextMenu(ContextMenu(menuItems: {
+                                /*@START_MENU_TOKEN@*/Text("Menu Item 1")/*@END_MENU_TOKEN@*/
+                                /*@START_MENU_TOKEN@*/Text("Menu Item 2")/*@END_MENU_TOKEN@*/
+                            }))
                     }
                 }
             }
