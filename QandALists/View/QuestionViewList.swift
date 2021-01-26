@@ -14,7 +14,7 @@ struct QuestionViewList: View {
     
     var body: some View {
         
-        NavigationLink(destination: AnswerViewNew()){
+        NavigationLink(destination: AnswerViewNew(title: content)){
             
             VStack{
                 HStack{

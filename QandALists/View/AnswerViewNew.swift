@@ -8,13 +8,30 @@
 import SwiftUI
 
 struct AnswerViewNew: View {
+    
+    var title :String
+    
     var body: some View {
-        Text("This is new answer page")
+        VStack{
+            
+            HStack{
+                
+                Text(title)
+                    .font(.title)
+                Spacer()
+            } // タイトル
+            .padding()
+            
+            Divider()
+                .padding(.horizontal)
+            
+          
+        }
     }
 }
 
 struct AnswerViewNew_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerViewNew()
+        AnswerViewNew(title: "if文使い方")
     }
 }

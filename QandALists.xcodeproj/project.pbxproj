@@ -21,6 +21,7 @@
 		C492FEEA25BC1C19009E3F42 /* QuestionViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FEE925BC1C19009E3F42 /* QuestionViewNew.swift */; };
 		C492FEF725BD9386009E3F42 /* QuestionViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FEF625BD9386009E3F42 /* QuestionViewList.swift */; };
 		C492FEFF25BECF14009E3F42 /* AnswerViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FEFE25BECF14009E3F42 /* AnswerViewNew.swift */; };
+		C492FF0425C0080A009E3F42 /* AnswerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FF0325C0080A009E3F42 /* AnswerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		C492FEE925BC1C19009E3F42 /* QuestionViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewNew.swift; sourceTree = "<group>"; };
 		C492FEF625BD9386009E3F42 /* QuestionViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewList.swift; sourceTree = "<group>"; };
 		C492FEFE25BECF14009E3F42 /* AnswerViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewNew.swift; sourceTree = "<group>"; };
+		C492FF0325C0080A009E3F42 /* AnswerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				C492FED225BC11F1009E3F42 /* QuestionController.swift */,
+				C492FF0325C0080A009E3F42 /* AnswerController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				C492FEEA25BC1C19009E3F42 /* QuestionViewNew.swift in Sources */,
 				C492FEFF25BECF14009E3F42 /* AnswerViewNew.swift in Sources */,
 				C492FED825BC13F9009E3F42 /* QuestionView.swift in Sources */,
+				C492FF0425C0080A009E3F42 /* AnswerController.swift in Sources */,
 				C492FEC925BC0FF9009E3F42 /* QandALists.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

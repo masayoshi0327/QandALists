@@ -16,17 +16,10 @@ struct QuestionView: View {
     @Environment(\.managedObjectContext) var context
     
     var body: some View {
-        VStack{
             
-            HStack{
-                
-                Text("This is question")
-                
-                Spacer()
-                
-            }
-            .padding()
-            NavigationView{
+        NavigationView{
+            
+            ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom), content: {
             
                 ScrollView(showsIndicators: false){
                     
@@ -49,24 +42,18 @@ struct QuestionView: View {
                                     })
                                 }))
                         }
+                        .navigationTitle("Question")
                     }
                 }
-            }
             
-            Spacer()
-            
-            HStack{
-                
-                Spacer()
-                
                 Button(action: {questionData.isNewData.toggle()}, label: {
                     Text("Button")
                 })
                 .sheet(isPresented: $questionData.isNewData, content: {
                     QuestionViewNew(questionData: questionData)
                 })
-            }
-            .padding()
+                .padding()
+            })
         }
     }
 }
