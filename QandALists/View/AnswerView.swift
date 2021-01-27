@@ -9,21 +9,32 @@ import SwiftUI
 
 struct AnswerView: View {
     
-    @FetchRequest(entity: Answer.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: true)],animation: .spring()) var results : FetchedResults<Answer>
+    @StateObject var answerData = QuestionController()
+    @FetchRequest(entity: Answer.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)],animation: .spring()) var results : FetchedResults<Answer>
     @Environment(\.managedObjectContext) var context
     
     var body: some View {
         ScrollView{
             
-            LazyVStack(spacing:20){
+            LazyVStack(spacing:0){
+                
+                Divider()
             
                 ForEach(results){a in
-                    VStack{
-                     
-                        Text(a.title!)
-                        Text(a.solution!)
-                        Text(a.date!, style: .date)
-                    }
+                    AnswerViewList(title: a.title!, solution: a.solution!, date: a.date!)
+                        .contextMenu(ContextMenu(menuItems: {
+                            Button(action: {
+                                //answerData.EditItem(item: a)
+                            }, label: {
+                                Text("編集")
+                            })
+                            Button(action: {
+                                context.delete(a)
+                                try! context.save()
+                            }, label: {
+                                Text("削除")
+                            })
+                        }))
                 }
             }
         }

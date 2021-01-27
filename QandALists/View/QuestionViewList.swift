@@ -12,9 +12,6 @@ struct QuestionViewList: View {
     var item : Question
     @StateObject var answerData = QuestionController()
     
-    //var content : String
-    //var date : Date
-    
     var body: some View {
         
         NavigationLink(destination: AnswerViewNew(question: item, answerData: answerData), isActive: $answerData.isMovePage){
