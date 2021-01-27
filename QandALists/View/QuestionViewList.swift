@@ -9,16 +9,18 @@ import SwiftUI
 
 struct QuestionViewList: View {
     
-    var content : String
-    var date : Date
+    var item : Question
+    
+    //var content : String
+    //var date : Date
     
     var body: some View {
         
-        NavigationLink(destination: AnswerViewNew(title: content)){
+        NavigationLink(destination: AnswerViewNew(question: item)){
             
             VStack{
                 HStack{
-                    Text(content)
+                    Text(item.content!)
                         .font(.title2)
                         .foregroundColor(.black)
                     Spacer()
@@ -26,7 +28,7 @@ struct QuestionViewList: View {
                 
                 HStack{
                     Spacer()
-                    Text(date, style: .date)
+                    Text(item.date!, style: .date)
                         .foregroundColor(.gray)
                 }
             }
@@ -40,6 +42,5 @@ struct QuestionViewList: View {
 
 struct QuestionViewList_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionViewList(content: "if文の使いかた", date: Date())
-    }
+        QuestionViewList(item: Question())    }
 }

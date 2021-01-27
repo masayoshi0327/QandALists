@@ -9,14 +9,16 @@ import SwiftUI
 
 struct AnswerViewNew: View {
     
-    var title :String
+    var question : Question
+    @StateObject var answerData = QuestionController()
+    @Environment(\.managedObjectContext) var context
     
     var body: some View {
         VStack{
             
             HStack{
                 
-                Text(title)
+                Text(question.content!)
                     .font(.title)
                 Spacer()
             } // タイトル
@@ -25,6 +27,14 @@ struct AnswerViewNew: View {
             Divider()
                 .padding(.horizontal)
             
+            TextEditor(text: $answerData.solution)
+            
+            Button(action: {answerData.saveAnswer(q: question, context: context)}, label: {
+                Text("Button")
+            })
+            
+            
+            
           
         }
     }
@@ -32,6 +42,6 @@ struct AnswerViewNew: View {
 
 struct AnswerViewNew_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerViewNew(title: "if文使い方")
+        AnswerViewNew(question: Question())
     }
 }

@@ -27,7 +27,7 @@ struct QuestionView: View {
                     
                         ForEach(results){q in
                             
-                            QuestionViewList(content: q.content ?? "", date: q.date ?? Date())
+                            QuestionViewList(item: q)
                                 .contextMenu(ContextMenu(menuItems: {
                                     Button(action: {
                                         questionData.EditItem(item: q)

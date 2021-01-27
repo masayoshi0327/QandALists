@@ -15,6 +15,8 @@ class QuestionController : ObservableObject{
     @Published var isNewData = false
     @Published var updateItem : Question!
     
+    @Published var solution = ""
+    
     func saveQuestion(context : NSManagedObjectContext){
         
         if updateItem != nil{
@@ -59,5 +61,24 @@ class QuestionController : ObservableObject{
         date = item.date!
         content = item.content!
         isNewData.toggle()
+    }
+    
+    func saveAnswer(q: Question, context : NSManagedObjectContext){
+        
+        updateItem = q
+        let newAnswer = Answer(context: context)
+        newAnswer.title = q.content
+        newAnswer.solution = solution
+        newAnswer.date = date
+        
+        do{
+            try context.save()
+            solution = ""
+            date = Date()
+            updateItem = nil
+        }
+        catch{
+            print(error.localizedDescription)
+        }
     }
 }

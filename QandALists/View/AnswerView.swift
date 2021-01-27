@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct AnswerView: View {
+    
+    @FetchRequest(entity: Answer.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: true)],animation: .spring()) var results : FetchedResults<Answer>
+    @Environment(\.managedObjectContext) var context
+    
     var body: some View {
-        Text("This is Answer")
+        ScrollView{
+            
+            LazyVStack(spacing:20){
+            
+                ForEach(results){a in
+                    VStack{
+                     
+                        Text(a.title!)
+                        Text(a.solution!)
+                        Text(a.date!, style: .date)
+                    }
+                }
+            }
+        }
     }
 }
 
