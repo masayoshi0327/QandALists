@@ -10,7 +10,7 @@ import SwiftUI
 struct AnswerViewNew: View {
     
     var question : Question
-    @StateObject var answerData = QuestionController()
+    @ObservedObject var answerData : QuestionController
     @Environment(\.managedObjectContext) var context
     
     var body: some View {
@@ -18,7 +18,7 @@ struct AnswerViewNew: View {
             
             HStack{
                 
-                Text(question.content!)
+                Text(question.content ?? "")
                     .font(.title)
                 Spacer()
             } // タイトル
@@ -42,6 +42,6 @@ struct AnswerViewNew: View {
 
 struct AnswerViewNew_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerViewNew(question: Question())
+        AnswerViewNew(question: Question(), answerData: QuestionController())
     }
 }

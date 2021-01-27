@@ -10,17 +10,18 @@ import SwiftUI
 struct QuestionViewList: View {
     
     var item : Question
+    @StateObject var answerData = QuestionController()
     
     //var content : String
     //var date : Date
     
     var body: some View {
         
-        NavigationLink(destination: AnswerViewNew(question: item)){
+        NavigationLink(destination: AnswerViewNew(question: item, answerData: answerData), isActive: $answerData.isMovePage){
             
             VStack{
                 HStack{
-                    Text(item.content!)
+                    Text(item.content ?? "")
                         .font(.title2)
                         .foregroundColor(.black)
                     Spacer()
@@ -28,7 +29,7 @@ struct QuestionViewList: View {
                 
                 HStack{
                     Spacer()
-                    Text(item.date!, style: .date)
+                    Text(item.date ?? Date(), style: .date)
                         .foregroundColor(.gray)
                 }
             }
