@@ -4,13 +4,14 @@
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="solution" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Question" representedClassName="Question" syncable="YES" codeGenerationType="class">
         <attribute name="content" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <elements>
-        <element name="Answer" positionX="-18" positionY="27" width="128" height="88"/>
+        <element name="Answer" positionX="-18" positionY="27" width="128" height="103"/>
         <element name="Question" positionX="-177.3828125" positionY="28.09375" width="128" height="73"/>
     </elements>
 </model>

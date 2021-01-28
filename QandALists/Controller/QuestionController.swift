@@ -16,6 +16,7 @@ class QuestionController : ObservableObject{
     @Published var updateItem : Question!
     
     @Published var solution = ""
+    @Published var url = ""
     @Published var isMovePage = false
     
     func saveQuestion(context : NSManagedObjectContext){
@@ -69,6 +70,7 @@ class QuestionController : ObservableObject{
         let newAnswer = Answer(context: context)
         newAnswer.title = q.content
         newAnswer.solution = solution
+        newAnswer.url = url
         newAnswer.date = date
         context.delete(q)
         
@@ -76,6 +78,7 @@ class QuestionController : ObservableObject{
             try context.save()
             isMovePage.toggle()
             solution = ""
+            url = ""
             date = Date()
             
         }

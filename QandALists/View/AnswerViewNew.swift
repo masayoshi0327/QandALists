@@ -14,29 +14,35 @@ struct AnswerViewNew: View {
     @Environment(\.managedObjectContext) var context
     
     var body: some View {
-        VStack{
+         
+        Form{
+            Section(header:
+                HStack{
+                Image(systemName: "lightbulb")
+                Text("説明")
+            }){
+                TextEditor(text: $answerData.solution)
+                    .frame(height: 140)
+            }
             
-            HStack{
-                
-                Text(question.content ?? "")
-                    .font(.title)
-                Spacer()
-            } // タイトル
-            .padding()
-            
-            Divider()
-                .padding(.horizontal)
-            
-            TextEditor(text: $answerData.solution)
-            
+            Section(header:
+                HStack{
+                Image(systemName: "link")
+                Text("参考記事")
+            }){
+                TextField("記事のURLを貼り付け", text: $answerData.url)
+            }
             Button(action: {answerData.saveAnswer(q: question, context: context)}, label: {
-                Text("Button")
+                HStack{
+                    Spacer()
+                    Text("解決！")
+                        .foregroundColor(answerData.solution.isEmpty ? .gray:.green)
+                    Spacer()
+                }
             })
-            
-            
-            
-          
+            .disabled(answerData.solution.isEmpty)
         }
+        .navigationTitle(question.content ?? "")
     }
 }
 
