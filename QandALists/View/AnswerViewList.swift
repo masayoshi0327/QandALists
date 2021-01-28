@@ -11,29 +11,38 @@ struct AnswerViewList: View {
     
     var title : String
     var solution : String
+    var url : String
     var date : Date
     
     var body: some View {
         
-        VStack(alignment: .leading){
+        VStack(alignment: .leading, spacing: 10, content: {
         
-            VStack(alignment: .leading, spacing: 10, content: {
+            Text(title)
+                .fontWeight(.bold)
             
-                Text(title)
-                    .font(.title2)
-                    .fontWeight(.bold)
-                Text(solution)
-                
-                
-                Text(date, style: .date)
-                    .font(.caption)
-                    .foregroundColor(.gray)
-            })
-            .padding()
+            Text(solution)
             
-            Divider()
-        }
-        .contentShape(Rectangle())
+            if url != "none"{
+                HStack{
+                    
+                    Image(systemName: "link")
+                        .font(.caption)
+                    Link(destination: URL(string: url)!, label: {
+                        Text(url)
+                    })
+                }
+            }
+            
+            Text(date, style: .date)
+                .font(.caption)
+                .foregroundColor(.gray)
+        })
+        .frame(maxWidth: .infinity)
+        .padding()
+        .background(Color(#colorLiteral(red: 0.9177905035, green: 1, blue: 0.9291417856, alpha: 1)))
+        .cornerRadius(20)
+        .shadow(radius: 1, x: 1, y: 1)
     }
 }
 
@@ -42,6 +51,7 @@ struct AnswerViewList_Previews: PreviewProvider {
         AnswerViewList(
             title: "JavaScript if文 使い方",
             solution: "条件分岐に使う",
+            url: "https://mobile.twitter.com/masayoshi_tozan",
             date: Date()
         )
     }

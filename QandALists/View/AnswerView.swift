@@ -21,7 +21,7 @@ struct AnswerView: View {
                 Divider()
             
                 ForEach(results){a in
-                    AnswerViewList(title: a.title!, solution: a.solution!, date: a.date!)
+                    AnswerViewList(title: a.title!, solution: a.solution!, url: a.url ?? "none", date: a.date!)
                         .contextMenu(ContextMenu(menuItems: {
                             Button(action: {
                                 //answerData.EditItem(item: a)
