@@ -15,9 +15,12 @@ class QuestionController : ObservableObject{
     @Published var isNewData = false
     @Published var updateItem : Question!
     
+    @Published var title = ""
     @Published var solution = ""
     @Published var url = ""
     @Published var isMovePage = false
+    @Published var isMoveEdit = false
+    @Published var editAnswer : Answer!
     
     func saveQuestion(context : NSManagedObjectContext){
         
@@ -85,5 +88,33 @@ class QuestionController : ObservableObject{
         catch{
             print(error.localizedDescription)
         }
+    }
+    
+    func moveAnswerEditor(item: Answer){
+            
+        editAnswer = item
+        title = item.title!
+        solution = item.solution!
+        url = item.url!
+        date = item.date!
+        isMoveEdit.toggle()
+    }
+    
+    func updateAnswer(context: NSManagedObjectContext){
+                    
+        // Means Update Old Date...
+        editAnswer.title = title
+        editAnswer.solution = solution
+        editAnswer.url = url
+        
+        try! context.save()
+        
+        // removing updatingItem if successful
+        
+        editAnswer = nil
+        isMoveEdit.toggle()
+        title = ""
+        solution = ""
+        date = Date()
     }
 }

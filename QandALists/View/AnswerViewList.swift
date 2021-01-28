@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AnswerViewList: View {
     
+    //var item : Answer
+    
     var title : String
     var solution : String
     var url : String
@@ -23,7 +25,7 @@ struct AnswerViewList: View {
             
             Text(solution)
             
-            if url != "none"{
+            if url.isEmpty == false{
                 HStack{
                     
                     Image(systemName: "link")
@@ -38,21 +40,10 @@ struct AnswerViewList: View {
                 .font(.caption)
                 .foregroundColor(.gray)
         })
-        .frame(maxWidth: .infinity)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
         .background(Color(#colorLiteral(red: 0.9177905035, green: 1, blue: 0.9291417856, alpha: 1)))
         .cornerRadius(20)
         .shadow(radius: 1, x: 1, y: 1)
-    }
-}
-
-struct AnswerViewList_Previews: PreviewProvider {
-    static var previews: some View {
-        AnswerViewList(
-            title: "JavaScript if文 使い方",
-            solution: "条件分岐に使う",
-            url: "https://mobile.twitter.com/masayoshi_tozan",
-            date: Date()
-        )
     }
 }

@@ -22,6 +22,7 @@
 		C492FEF725BD9386009E3F42 /* QuestionViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FEF625BD9386009E3F42 /* QuestionViewList.swift */; };
 		C492FEFF25BECF14009E3F42 /* AnswerViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FEFE25BECF14009E3F42 /* AnswerViewNew.swift */; };
 		C492FF1525C14392009E3F42 /* AnswerViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FF1425C14392009E3F42 /* AnswerViewList.swift */; };
+		C492FF4E25C2C0EA009E3F42 /* AnswerViewEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FF4D25C2C0E9009E3F42 /* AnswerViewEdit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		C492FEF625BD9386009E3F42 /* QuestionViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewList.swift; sourceTree = "<group>"; };
 		C492FEFE25BECF14009E3F42 /* AnswerViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewNew.swift; sourceTree = "<group>"; };
 		C492FF1425C14392009E3F42 /* AnswerViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewList.swift; sourceTree = "<group>"; };
+		C492FF4D25C2C0E9009E3F42 /* AnswerViewEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewEdit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				C492FEF625BD9386009E3F42 /* QuestionViewList.swift */,
 				C492FEFE25BECF14009E3F42 /* AnswerViewNew.swift */,
 				C492FF1425C14392009E3F42 /* AnswerViewList.swift */,
+				C492FF4D25C2C0E9009E3F42 /* AnswerViewEdit.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C492FF4E25C2C0EA009E3F42 /* AnswerViewEdit.swift in Sources */,
 				C492FED325BC11F1009E3F42 /* QuestionController.swift in Sources */,
 				C492FE9B25BC0E53009E3F42 /* Persistence.swift in Sources */,
 				C492FEF725BD9386009E3F42 /* QuestionViewList.swift in Sources */,

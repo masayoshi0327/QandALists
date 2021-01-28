@@ -16,15 +16,15 @@ struct AnswerView: View {
     var body: some View {
         ScrollView{
             
-            LazyVStack(spacing:0){
+            LazyVStack(spacing:10){
                 
                 Divider()
             
                 ForEach(results){a in
-                    AnswerViewList(title: a.title!, solution: a.solution!, url: a.url ?? "none", date: a.date!)
+                    AnswerViewList(title: a.title ?? "", solution: a.solution ?? "", url: a.url ?? "", date: a.date ?? Date())
                         .contextMenu(ContextMenu(menuItems: {
                             Button(action: {
-                                //answerData.EditItem(item: a)
+                                answerData.moveAnswerEditor(item: a)
                             }, label: {
                                 Text("編集")
                             })
@@ -35,6 +35,9 @@ struct AnswerView: View {
                                 Text("削除")
                             })
                         }))
+                        .sheet(isPresented: $answerData.isMoveEdit, content: {
+                            AnswerViewEdit(answerData: answerData)
+                        })
                 }
             }
         }
