@@ -36,11 +36,11 @@ struct AnswerViewNew: View {
                 HStack{
                     Spacer()
                     Text("解決！")
-                        .foregroundColor(answerData.solution.isEmpty ? .gray:.green)
+                        .foregroundColor(answerData.solution.isEmpty || (!answerData.isURL(answerData.url) && !answerData.url.isEmpty) ? .gray:.green)
                     Spacer()
                 }
             })
-            .disabled(answerData.solution.isEmpty)
+            .disabled(answerData.solution.isEmpty || (!answerData.isURL(answerData.url) && !answerData.url.isEmpty))
         }
         .navigationTitle(question.content ?? "")
     }

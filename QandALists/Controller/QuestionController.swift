@@ -90,6 +90,11 @@ class QuestionController : ObservableObject{
         }
     }
     
+    func isURL(_ str:String) -> Bool {
+        let predicate = NSPredicate(format: "SELF MATCHES '[_/:%#$&?()~.=+-A-Za-z0-9]+'")
+        return predicate.evaluate(with: str)
+    }
+    
     func moveAnswerEditor(item: Answer){
             
         editAnswer = item
