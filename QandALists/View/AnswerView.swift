@@ -21,7 +21,7 @@ struct AnswerView: View {
 
             HStack{
                 
-                
+                AnswerViewCount(count: results.count)
                 TextField("タイトルを検索", text: $searchWord)
                     .padding()
                 
@@ -31,7 +31,8 @@ struct AnswerView: View {
                         Text("完了")
                     })
                 }
-            }
+            } //検索バー
+            .padding(.horizontal)
             .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
                 isKeyboardOpened = true
             }

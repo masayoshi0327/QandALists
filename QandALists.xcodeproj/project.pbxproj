@@ -23,6 +23,7 @@
 		C492FEFF25BECF14009E3F42 /* AnswerViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FEFE25BECF14009E3F42 /* AnswerViewNew.swift */; };
 		C492FF1525C14392009E3F42 /* AnswerViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FF1425C14392009E3F42 /* AnswerViewList.swift */; };
 		C492FF4E25C2C0EA009E3F42 /* AnswerViewEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FF4D25C2C0E9009E3F42 /* AnswerViewEdit.swift */; };
+		C4F1910A25CC26C8002DE1DF /* AnswerViewCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F1910925CC26C8002DE1DF /* AnswerViewCount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		C492FEFE25BECF14009E3F42 /* AnswerViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewNew.swift; sourceTree = "<group>"; };
 		C492FF1425C14392009E3F42 /* AnswerViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewList.swift; sourceTree = "<group>"; };
 		C492FF4D25C2C0E9009E3F42 /* AnswerViewEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewEdit.swift; sourceTree = "<group>"; };
+		C4F1910925CC26C8002DE1DF /* AnswerViewCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewCount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				C492FEFE25BECF14009E3F42 /* AnswerViewNew.swift */,
 				C492FF1425C14392009E3F42 /* AnswerViewList.swift */,
 				C492FF4D25C2C0E9009E3F42 /* AnswerViewEdit.swift */,
+				C4F1910925CC26C8002DE1DF /* AnswerViewCount.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				C492FE9225BC0E51009E3F42 /* QandAListsApp.swift in Sources */,
 				C492FEEA25BC1C19009E3F42 /* QuestionViewNew.swift in Sources */,
 				C492FEFF25BECF14009E3F42 /* AnswerViewNew.swift in Sources */,
+				C4F1910A25CC26C8002DE1DF /* AnswerViewCount.swift in Sources */,
 				C492FED825BC13F9009E3F42 /* QuestionView.swift in Sources */,
 				C492FEC925BC0FF9009E3F42 /* QandALists.xcdatamodeld in Sources */,
 			);
