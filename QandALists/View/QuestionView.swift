@@ -47,7 +47,7 @@ struct QuestionView: View {
                 }
             
                 Button(action: {questionData.isNewData.toggle()}, label: {
-                    Text("Button")
+                    QuestionViewButton()
                 })
                 .sheet(isPresented: $questionData.isNewData, content: {
                     QuestionViewNew(questionData: questionData)
