@@ -40,6 +40,8 @@ struct AnswerView: View {
                 isKeyboardOpened = false
             }
             
+            Divider()
+            
             ScrollView{
                 
                 LazyVStack(spacing:10){

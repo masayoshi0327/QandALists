@@ -40,8 +40,8 @@ struct AnswerViewList: View {
         })
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
-        .background(Color(#colorLiteral(red: 0.9177905035, green: 1, blue: 0.9291417856, alpha: 1)))
+        .background(Color.white)
         .cornerRadius(20)
-        .shadow(radius: 1, x: 1, y: 1)
+        .shadow(radius: 2, x: 1, y: 1)
     }
 }
