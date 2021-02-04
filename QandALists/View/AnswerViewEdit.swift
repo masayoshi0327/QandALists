@@ -42,11 +42,11 @@ struct AnswerViewEdit: View {
                 HStack{
                     Spacer()
                     Text("更新")
-                        .foregroundColor(answerData.solution.isEmpty ? .gray:.green)
+                        .foregroundColor(answerData.solution.isEmpty || (!answerData.isURL(answerData.url) && !answerData.url.isEmpty) ? .gray:.green)
                     Spacer()
                 }
             })
-            .disabled(answerData.solution.isEmpty)
+            .disabled(answerData.solution.isEmpty || (!answerData.isURL(answerData.url) && !answerData.url.isEmpty))
         }
     }
 }
