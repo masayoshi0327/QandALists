@@ -13,27 +13,29 @@ struct QuestionViewNew: View {
     
     var body: some View {
         
-        VStack{
-            
-            HStack{
+        NavigationView{
+        
+            Form{
                 
-                Text("課題")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                
-                Spacer()
-                
+                Section(header:
+                    HStack{
+                    Image(systemName: "questionmark.circle")
+                    Text("課題")
+                }){
+                    TextEditor(text: $questionData.content)
+                        .frame(height: 140)
+                }
                 Button(action: {questionData.saveQuestion(context: context)}, label: {
-                    Text("Add")
+                    HStack{
+                        Spacer()
+                        Text(questionData.updateItem == nil ? "追加する" : "更新")
+                            .foregroundColor(questionData.content.isEmpty ? .gray : .yellow)
+                        Spacer()
+                    }
                 })
+                .disabled(questionData.content.isEmpty)
             }
-            .padding(.horizontal)
-            
-            TextField("ここに入力" ,text: $questionData.content)
-            
-            Divider()
         }
-        .padding()
     }
 }
 

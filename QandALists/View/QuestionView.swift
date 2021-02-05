@@ -20,29 +20,38 @@ struct QuestionView: View {
         NavigationView{
             
             ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom), content: {
-            
-                ScrollView(showsIndicators: false){
-                    
-                    LazyVStack(spacing: 20){
-                    
-                        ForEach(results){q in
-                            
-                            QuestionViewList(item: q)
-                                .contextMenu(ContextMenu(menuItems: {
-                                    Button(action: {
-                                        questionData.EditItem(item: q)
-                                    }, label: {
-                                        Text("編集")
-                                    })
-                                    Button(action: {
-                                        context.delete(q)
-                                        try! context.save()
-                                    }, label: {
-                                        Text("削除")
-                                    })
-                                }))
+                
+                if results.isEmpty{
+                    VStack{
+                        Spacer()
+                        Text("わからないことを整理しましょう")
+                        Spacer()
+                    }
+                    .frame(maxWidth: .infinity, alignment: .center)
+                }
+                else{
+                    ScrollView(showsIndicators: false){
+                        
+                        LazyVStack(spacing: 20){
+                        
+                            ForEach(results){q in
+                                
+                                QuestionViewList(item: q)
+                                    .contextMenu(ContextMenu(menuItems: {
+                                        Button(action: {
+                                            questionData.EditItem(item: q)
+                                        }, label: {
+                                            Text("編集")
+                                        })
+                                        Button(action: {
+                                            context.delete(q)
+                                            try! context.save()
+                                        }, label: {
+                                            Text("削除")
+                                        })
+                                    }))
+                            }
                         }
-                        .navigationTitle("Question")
                     }
                 }
             
@@ -54,6 +63,7 @@ struct QuestionView: View {
                 })
                 .padding()
             })
+            .navigationTitle("わからないことリスト")
         }
     }
 }
