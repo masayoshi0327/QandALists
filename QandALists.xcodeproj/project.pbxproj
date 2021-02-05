@@ -23,6 +23,7 @@
 		C492FEFF25BECF14009E3F42 /* AnswerViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FEFE25BECF14009E3F42 /* AnswerViewNew.swift */; };
 		C492FF1525C14392009E3F42 /* AnswerViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FF1425C14392009E3F42 /* AnswerViewList.swift */; };
 		C492FF4E25C2C0EA009E3F42 /* AnswerViewEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FF4D25C2C0E9009E3F42 /* AnswerViewEdit.swift */; };
+		C49BBFBF25CCF6C600417087 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C49BBFBE25CCF6C600417087 /* README.md */; };
 		C4F1910A25CC26C8002DE1DF /* AnswerViewCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F1910925CC26C8002DE1DF /* AnswerViewCount.swift */; };
 		C4F1910F25CC3101002DE1DF /* QuestionViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F1910E25CC3101002DE1DF /* QuestionViewButton.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		C492FEFE25BECF14009E3F42 /* AnswerViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewNew.swift; sourceTree = "<group>"; };
 		C492FF1425C14392009E3F42 /* AnswerViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewList.swift; sourceTree = "<group>"; };
 		C492FF4D25C2C0E9009E3F42 /* AnswerViewEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewEdit.swift; sourceTree = "<group>"; };
+		C49BBFBE25CCF6C600417087 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C4F1910925CC26C8002DE1DF /* AnswerViewCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewCount.swift; sourceTree = "<group>"; };
 		C4F1910E25CC3101002DE1DF /* QuestionViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 		C492FE8525BC0E51009E3F42 = {
 			isa = PBXGroup;
 			children = (
+				C49BBFBE25CCF6C600417087 /* README.md */,
 				C492FE9025BC0E51009E3F42 /* QandALists */,
 				C492FEA725BC0E54009E3F42 /* QandAListsTests */,
 				C492FEB225BC0E54009E3F42 /* QandAListsUITests */,
@@ -285,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C49BBFBF25CCF6C600417087 /* README.md in Resources */,
 				C492FE9925BC0E53009E3F42 /* Preview Assets.xcassets in Resources */,
 				C492FE9625BC0E53009E3F42 /* Assets.xcassets in Resources */,
 			);
