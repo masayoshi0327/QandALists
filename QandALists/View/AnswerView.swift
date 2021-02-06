@@ -11,6 +11,8 @@ struct AnswerView: View {
     
     @State var searchWord:String = ""
     @State var isKeyboardOpened = false
+    @State var deleteAlert = false
+    @State var deleteItem : Answer? = nil
     @StateObject var answerData = QuestionController()
     @FetchRequest(entity: Answer.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)],animation: .spring()) var results : FetchedResults<Answer>
     @Environment(\.managedObjectContext) var context
@@ -58,14 +60,23 @@ struct AnswerView: View {
                                         Text("編集")
                                     })
                                     Button(action: {
-                                        context.delete(a)
-                                        try! context.save()
+                                        deleteItem = a
+                                        deleteAlert = true
                                     }, label: {
                                         Text("削除")
                                     })
                                 }))
                                 .sheet(isPresented: $answerData.isMoveEdit, content: {
                                     AnswerViewEdit(answerData: answerData)
+                                })
+                                .alert(isPresented: $deleteAlert, content: {
+                                    Alert(title: Text("削除しますか？"), primaryButton: .destructive(Text("はい"), action: {
+                                        context.delete(deleteItem!)
+                                        try! context.save()
+                                        deleteItem = nil
+                                    }), secondaryButton: .cancel(Text("キャンセル"), action: {
+                                        deleteAlert = false
+                                    }))
                                 })
                         }
                     }

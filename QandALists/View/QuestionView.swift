@@ -10,8 +10,9 @@ import CoreData
 
 struct QuestionView: View {
     
+    @State var deleteAlert = false
+    @State var deleteItem : Question? = nil
     @StateObject var questionData = QuestionController()
-    
     @FetchRequest(entity: Question.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: true)],animation: .spring()) var results : FetchedResults<Question>
     @Environment(\.managedObjectContext) var context
     
@@ -44,12 +45,21 @@ struct QuestionView: View {
                                             Text("編集")
                                         })
                                         Button(action: {
-                                            context.delete(q)
-                                            try! context.save()
+                                            deleteItem = q
+                                            deleteAlert = true
                                         }, label: {
                                             Text("削除")
                                         })
                                     }))
+                                    .alert(isPresented: $deleteAlert, content: {
+                                        Alert(title: Text("削除しますか？"), primaryButton: .destructive(Text("はい"), action: {
+                                            context.delete(deleteItem!)
+                                            try! context.save()
+                                            deleteItem = nil
+                                        }), secondaryButton: .cancel(Text("キャンセル"), action: {
+                                            deleteAlert = false
+                                        }))
+                                    })
                             }
                         }
                     }
@@ -65,11 +75,5 @@ struct QuestionView: View {
             })
             .navigationTitle("わからないことリスト")
         }
-    }
-}
-
-struct QuestionView_Previews: PreviewProvider {
-    static var previews: some View {
-        QuestionView()
     }
 }
