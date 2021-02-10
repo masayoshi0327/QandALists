@@ -40,7 +40,7 @@ struct QuestionView: View {
                                 QuestionViewList(item: q)
                                     .contextMenu(ContextMenu(menuItems: {
                                         Button(action: {
-                                            questionData.EditItem(item: q)
+                                            questionData.moveQuestionEditor(item: q)
                                         }, label: {
                                             Text("編集")
                                         })
@@ -51,6 +51,10 @@ struct QuestionView: View {
                                             Text("削除")
                                         })
                                     }))
+                                    .sheet(isPresented: $questionData.isUpdateData, content: {
+                                        QuestionViewEdit(questionData: questionData)
+                                    })
+                                    
                                     .alert(isPresented: $deleteAlert, content: {
                                         Alert(title: Text("削除しますか？"), primaryButton: .destructive(Text("はい"), action: {
                                             context.delete(deleteItem!)
@@ -65,7 +69,10 @@ struct QuestionView: View {
                     }
                 }
             
-                Button(action: {questionData.isNewData.toggle()}, label: {
+                Button(action: {
+                    questionData.content = ""
+                    questionData.isNewData.toggle()
+                }, label: {
                     QuestionViewButton()
                 })
                 .sheet(isPresented: $questionData.isNewData, content: {

@@ -28,7 +28,7 @@ struct QuestionViewNew: View {
                 Button(action: {questionData.saveQuestion(context: context)}, label: {
                     HStack{
                         Spacer()
-                        Text(questionData.updateItem == nil ? "追加する" : "更新")
+                        Text("追加する")
                             .foregroundColor(questionData.content.isEmpty ? .gray : .yellow)
                         Spacer()
                     }

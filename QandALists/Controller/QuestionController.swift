@@ -13,6 +13,7 @@ class QuestionController : ObservableObject{
     @Published var content = ""
     @Published var date = Date()
     @Published var isNewData = false
+    @Published var isUpdateData = false
     @Published var updateItem : Question!
     
     @Published var title = ""
@@ -24,48 +25,41 @@ class QuestionController : ObservableObject{
     
     func saveQuestion(context : NSManagedObjectContext){
         
-        if updateItem != nil{
-                    
-            // Means Update Old Date...
-            updateItem.date = date
-            updateItem.content = content
-            
-            try! context.save()
-            
-            // removing updatingItem if successful
-            
-            updateItem = nil
-            isNewData.toggle()
-            content = ""
-            date = Date()
-            return
-        }
-        
         let newQuestion = Question(context: context)
         newQuestion.content = content
         newQuestion.date = date
         
-        // saving data...
-        
         do{
             
             try context.save()
-            // success means closing view...
-            isNewData.toggle()
             content = ""
             date = Date()
+            isNewData.toggle()
         }
         catch{
             print(error.localizedDescription)
         }
     }
-    func EditItem(item: Question){
+    func moveQuestionEditor(item: Question){
             
         updateItem = item
-        // togging the newDataView...
         date = item.date!
         content = item.content!
-        isNewData.toggle()
+        isUpdateData.toggle()
+    }
+    
+    func updateQuestion(context: NSManagedObjectContext){
+                    
+        updateItem.date = date
+        updateItem.content = content
+        
+        try! context.save()
+        
+        updateItem = nil
+        isUpdateData.toggle()
+        content = ""
+        date = Date()
+        return
     }
     
     func saveAnswer(q: Question, context : NSManagedObjectContext){
@@ -107,14 +101,11 @@ class QuestionController : ObservableObject{
     
     func updateAnswer(context: NSManagedObjectContext){
                     
-        // Means Update Old Date...
         editAnswer.title = title
         editAnswer.solution = solution
         editAnswer.url = url
         
         try! context.save()
-        
-        // removing updatingItem if successful
         
         editAnswer = nil
         isMoveEdit.toggle()
