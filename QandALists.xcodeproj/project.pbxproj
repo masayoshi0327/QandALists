@@ -25,6 +25,11 @@
 		C492FF4E25C2C0EA009E3F42 /* AnswerViewEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FF4D25C2C0E9009E3F42 /* AnswerViewEdit.swift */; };
 		C49BBFBF25CCF6C600417087 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C49BBFBE25CCF6C600417087 /* README.md */; };
 		C4BD9AB925D115470050F594 /* QuestionViewEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD9AB825D115470050F594 /* QuestionViewEdit.swift */; };
+		C4BD9AE725D5E3780050F594 /* ManualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD9AE625D5E3780050F594 /* ManualView.swift */; };
+		C4BD9AF625D67D000050F594 /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD9AF525D67D000050F594 /* FirstPage.swift */; };
+		C4BD9B0625D67D370050F594 /* SecondPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD9B0525D67D370050F594 /* SecondPage.swift */; };
+		C4BD9B0B25D67D440050F594 /* ThirdPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD9B0A25D67D440050F594 /* ThirdPage.swift */; };
+		C4BD9B1025D67D800050F594 /* FourthPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD9B0F25D67D800050F594 /* FourthPage.swift */; };
 		C4F1910A25CC26C8002DE1DF /* AnswerViewCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F1910925CC26C8002DE1DF /* AnswerViewCount.swift */; };
 		C4F1910F25CC3101002DE1DF /* QuestionViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F1910E25CC3101002DE1DF /* QuestionViewButton.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +76,11 @@
 		C492FF4D25C2C0E9009E3F42 /* AnswerViewEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewEdit.swift; sourceTree = "<group>"; };
 		C49BBFBE25CCF6C600417087 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C4BD9AB825D115470050F594 /* QuestionViewEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewEdit.swift; sourceTree = "<group>"; };
+		C4BD9AE625D5E3780050F594 /* ManualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualView.swift; sourceTree = "<group>"; };
+		C4BD9AF525D67D000050F594 /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
+		C4BD9B0525D67D370050F594 /* SecondPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPage.swift; sourceTree = "<group>"; };
+		C4BD9B0A25D67D440050F594 /* ThirdPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPage.swift; sourceTree = "<group>"; };
+		C4BD9B0F25D67D800050F594 /* FourthPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthPage.swift; sourceTree = "<group>"; };
 		C4F1910925CC26C8002DE1DF /* AnswerViewCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewCount.swift; sourceTree = "<group>"; };
 		C4F1910E25CC3101002DE1DF /* QuestionViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,8 +194,21 @@
 				C4F1910925CC26C8002DE1DF /* AnswerViewCount.swift */,
 				C4F1910E25CC3101002DE1DF /* QuestionViewButton.swift */,
 				C4BD9AB825D115470050F594 /* QuestionViewEdit.swift */,
+				C4BD9AE625D5E3780050F594 /* ManualView.swift */,
+				C4BD9AF425D67CC60050F594 /* Manuals */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C4BD9AF425D67CC60050F594 /* Manuals */ = {
+			isa = PBXGroup;
+			children = (
+				C4BD9AF525D67D000050F594 /* FirstPage.swift */,
+				C4BD9B0525D67D370050F594 /* SecondPage.swift */,
+				C4BD9B0A25D67D440050F594 /* ThirdPage.swift */,
+				C4BD9B0F25D67D800050F594 /* FourthPage.swift */,
+			);
+			path = Manuals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,11 +342,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C492FF4E25C2C0EA009E3F42 /* AnswerViewEdit.swift in Sources */,
+				C4BD9AF625D67D000050F594 /* FirstPage.swift in Sources */,
 				C4BD9AB925D115470050F594 /* QuestionViewEdit.swift in Sources */,
 				C492FED325BC11F1009E3F42 /* QuestionController.swift in Sources */,
+				C4BD9B1025D67D800050F594 /* FourthPage.swift in Sources */,
 				C492FE9B25BC0E53009E3F42 /* Persistence.swift in Sources */,
+				C4BD9AE725D5E3780050F594 /* ManualView.swift in Sources */,
 				C492FEF725BD9386009E3F42 /* QuestionViewList.swift in Sources */,
 				C492FF1525C14392009E3F42 /* AnswerViewList.swift in Sources */,
+				C4BD9B0625D67D370050F594 /* SecondPage.swift in Sources */,
+				C4BD9B0B25D67D440050F594 /* ThirdPage.swift in Sources */,
 				C492FEE525BC142D009E3F42 /* AnswerView.swift in Sources */,
 				C492FE9425BC0E51009E3F42 /* ContentView.swift in Sources */,
 				C492FE9225BC0E51009E3F42 /* QandAListsApp.swift in Sources */,

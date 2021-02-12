@@ -9,6 +9,8 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    
+    @AppStorage(wrappedValue: true, "isFirstLaunch") var isFirstLaunch
 
     var body: some View {
 
@@ -20,5 +22,8 @@ struct ContentView: View {
                 .tabItem {Image(systemName: "lightbulb.fill")}.tag(2)
         }
         .accentColor(Color(#colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)))
+        .sheet(isPresented: $isFirstLaunch, content: {
+            ManualView()
+        })
     }
 }
