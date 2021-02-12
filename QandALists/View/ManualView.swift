@@ -28,8 +28,8 @@ struct ManualView: View {
                 ForEach(1..<5) { n in
                     Text("\(n)")
                         .padding()
-                        .font(.title2)
-                        .foregroundColor(n == selected ? .red:.gray)
+                        .font(n == selected ? .title2:.headline)
+                        .foregroundColor(n == selected ? .green:.gray)
                 }
             }
         }
