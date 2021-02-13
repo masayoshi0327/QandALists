@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FourthPage: View {
     var body: some View {
-        Text("4")
+        Text("4枚目")
     }
 }
 

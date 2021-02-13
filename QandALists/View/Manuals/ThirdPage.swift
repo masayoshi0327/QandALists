@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ThirdPage: View {
     var body: some View {
-        Text("3")
+        Text("3枚目")
     }
 }
 
