@@ -13,7 +13,7 @@ struct ManualView: View {
     
     var body: some View {
         
-        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)){
+        ZStack{
         
             TabView(selection: $selected) {
                 FirstPage().tag(1)
@@ -23,13 +23,32 @@ struct ManualView: View {
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             
-            HStack{
+            VStack{
                 
-                ForEach(1..<5) { n in
-                    Text("\(n)")
+                Spacer()
+                
+                HStack{
+                    Image(systemName: "chevron.compact.left")
                         .padding()
-                        .font(n == selected ? .title2:.headline)
-                        .foregroundColor(n == selected ? .yellow:.gray)
+                        .foregroundColor(.gray)
+                    
+                    Spacer()
+                    
+                    Image(systemName: "chevron.compact.right")
+                        .padding()
+                        .foregroundColor(.gray)
+                }
+                
+                Spacer()
+            
+                HStack{
+                    
+                    ForEach(1..<5) { n in
+                        Text("\(n)")
+                            .padding()
+                            .font(n == selected ? .title2:.headline)
+                            .foregroundColor(n == selected ? .yellow:.gray)
+                    }
                 }
             }
         }
