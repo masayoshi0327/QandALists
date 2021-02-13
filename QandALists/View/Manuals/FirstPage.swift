@@ -9,7 +9,27 @@ import SwiftUI
 
 struct FirstPage: View {
     var body: some View {
-        Text("1")
+        
+        VStack(alignment: .center){
+            Text("ようこそ。")
+                .font(.title)
+                .padding()
+            
+            (Text("わかりすと")
+                .fontWeight(.bold)
+                .foregroundColor(.yellow)
+            + Text("はあなただけの勉強サポートツールです。"))
+                .padding()
+                
+            
+            (Text("わかりすと")
+                .fontWeight(.bold)
+                .foregroundColor(.yellow)
+            + Text("の効果的な使い方について説明します。"))
+                .padding()
+        }
+        .frame(width: 300, height: 300)
+        .lineSpacing(5)
     }
 }
 

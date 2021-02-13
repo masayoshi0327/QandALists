@@ -29,7 +29,7 @@ struct ManualView: View {
                     Text("\(n)")
                         .padding()
                         .font(n == selected ? .title2:.headline)
-                        .foregroundColor(n == selected ? .green:.gray)
+                        .foregroundColor(n == selected ? .yellow:.gray)
                 }
             }
         }
