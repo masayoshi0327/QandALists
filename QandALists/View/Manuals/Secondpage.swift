@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SecondPage: View {
     var body: some View {
-        Text("2枚目")
+        Text("2枚目です")
     }
 }
 
