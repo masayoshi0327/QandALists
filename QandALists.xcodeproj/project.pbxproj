@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C46777F425D8A0E10003EF0F /* SecondPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46777F325D8A0E10003EF0F /* SecondPage.swift */; };
 		C492FE9225BC0E51009E3F42 /* QandAListsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FE9125BC0E51009E3F42 /* QandAListsApp.swift */; };
 		C492FE9425BC0E51009E3F42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FE9325BC0E51009E3F42 /* ContentView.swift */; };
 		C492FE9625BC0E53009E3F42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C492FE9525BC0E53009E3F42 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C46777F325D8A0E10003EF0F /* SecondPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPage.swift; sourceTree = "<group>"; };
 		C492FE8E25BC0E51009E3F42 /* QandALists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QandALists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C492FE9125BC0E51009E3F42 /* QandAListsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QandAListsApp.swift; sourceTree = "<group>"; };
 		C492FE9325BC0E51009E3F42 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				C4BD9AF525D67D000050F594 /* FirstPage.swift */,
 				C4BD9B0A25D67D440050F594 /* ThirdPage.swift */,
 				C4BD9B0F25D67D800050F594 /* FourthPage.swift */,
+				C46777F325D8A0E10003EF0F /* SecondPage.swift */,
 			);
 			path = Manuals;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				C492FEEA25BC1C19009E3F42 /* QuestionViewNew.swift in Sources */,
 				C492FEFF25BECF14009E3F42 /* AnswerViewNew.swift in Sources */,
 				C4F1910F25CC3101002DE1DF /* QuestionViewButton.swift in Sources */,
+				C46777F425D8A0E10003EF0F /* SecondPage.swift in Sources */,
 				C4F1910A25CC26C8002DE1DF /* AnswerViewCount.swift in Sources */,
 				C492FED825BC13F9009E3F42 /* QuestionView.swift in Sources */,
 				C492FEC925BC0FF9009E3F42 /* QandALists.xcdatamodeld in Sources */,
