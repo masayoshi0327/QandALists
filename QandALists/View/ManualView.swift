@@ -29,12 +29,14 @@ struct ManualView: View {
                 
                 HStack{
                     Image(systemName: "chevron.compact.left")
+                        .font(.title)
                         .padding()
                         .foregroundColor(selected == 1 ? .clear:.gray)
                     
                     Spacer()
                     
                     Image(systemName: "chevron.compact.right")
+                        .font(.title)
                         .padding()
                         .foregroundColor(selected == 4 ? .clear:.gray)
                 }
