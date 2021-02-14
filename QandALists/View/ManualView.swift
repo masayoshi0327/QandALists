@@ -27,18 +27,30 @@ struct ManualView: View {
                 
                 Spacer()
                 
+                
                 HStack{
-                    Image(systemName: "chevron.compact.left")
-                        .font(.title)
-                        .padding()
-                        .foregroundColor(selected == 1 ? .clear:.gray)
+                    //Back
+                    VStack{
+                        Image(systemName: "chevron.compact.left")
+                            .font(.title)
+                        Text("Back")
+                            .font(.caption)
+                    }
+                    .padding()
+                    .foregroundColor(selected == 1 ? .clear:.gray)
                     
                     Spacer()
                     
-                    Image(systemName: "chevron.compact.right")
-                        .font(.title)
-                        .padding()
-                        .foregroundColor(selected == 4 ? .clear:.gray)
+                    //Next
+                    VStack{
+                    
+                        Image(systemName: "chevron.compact.right")
+                            .font(.title)
+                        Text("Next")
+                            .font(.caption)
+                    }
+                    .padding()
+                    .foregroundColor(selected == 4 ? .clear:.gray)
                 }
                 
                 Spacer()
