@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct FirstPage: View {
+    
+    let app = "わかりすと"
+    
     var body: some View {
         
         VStack(alignment: .center){
@@ -15,14 +18,14 @@ struct FirstPage: View {
                 .font(.title)
                 .padding()
             
-            (Text("わかりすと")
+            (Text(app)
                 .fontWeight(.bold)
                 .foregroundColor(.yellow)
             + Text("はあなただけの勉強サポートツールです。"))
                 .padding()
                 
             
-            (Text("わかりすと")
+            (Text(app)
                 .fontWeight(.bold)
                 .foregroundColor(.yellow)
             + Text("の効果的な使い方について説明します。"))

@@ -19,13 +19,23 @@ struct AnswerView: View {
     
     var body: some View {
             
-        VStack{
-
+        VStack(alignment: .leading){
+            
             HStack{
+            
+                Text("わかったことリスト")
+                    .font(.title)
+                    .fontWeight(.bold)
+                
+                Spacer()
                 
                 AnswerViewCount(count: results.count)
+            }
+            .padding(.top)
+            .padding(.horizontal)
+
+            HStack{
                 TextField("タイトルを検索", text: $searchWord)
-                    .padding()
                 
                 if isKeyboardOpened{
                 
@@ -34,7 +44,7 @@ struct AnswerView: View {
                     })
                 }
             } //検索バー
-            .padding(.horizontal)
+            .padding()
             .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
                 isKeyboardOpened = true
             }

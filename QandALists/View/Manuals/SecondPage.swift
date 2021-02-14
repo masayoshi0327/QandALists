@@ -9,7 +9,13 @@ import SwiftUI
 
 struct SecondPage: View {
     var body: some View {
-        Text("2枚目です")
+        VStack{
+            Text("わからないことを整理しよう")
+                .font(.title2)
+            
+            
+            
+        }
     }
 }
 
