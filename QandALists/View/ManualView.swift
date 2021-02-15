@@ -10,6 +10,7 @@ import SwiftUI
 struct ManualView: View {
     
     @State var selected:Int = 1
+    @Binding var closeManuals: Bool
     
     var body: some View {
         
@@ -20,6 +21,7 @@ struct ManualView: View {
                 SecondPage().tag(2)
                 ThirdPage().tag(3)
                 FourthPage().tag(4)
+                FifthPage(closeManuals: $closeManuals).tag(5)
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             
@@ -50,14 +52,14 @@ struct ManualView: View {
                             .font(.caption)
                     }
                     .padding()
-                    .foregroundColor(selected == 4 ? .clear:.gray)
+                    .foregroundColor(selected == 5 ? .clear:.gray)
                 }
                 
                 Spacer()
             
                 HStack{
                     
-                    ForEach(1..<5) { n in
+                    ForEach(1..<6) { n in
                         Text("\(n)")
                             .padding()
                             .font(n == selected ? .title2:.headline)
@@ -69,8 +71,13 @@ struct ManualView: View {
     }
 }
 
-struct ManualView_Previews: PreviewProvider {
-    static var previews: some View {
-        ManualView()
-    }
-}
+//struct ManualView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Group {
+//            ManualView(closeManuals: true)
+//                .previewDevice(PreviewDevice(rawValue: "iPhone 11"))
+//            ManualView(closeManuals: true)
+//                .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
+//        }
+//    }
+//}
