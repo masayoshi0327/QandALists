@@ -26,7 +26,7 @@ struct QuestionViewEdit: View {
                     TextEditor(text: $questionData.content)
                         .frame(height: 140)
                 }
-                Button(action: {questionData.saveQuestion(context: context)}, label: {
+                Button(action: {questionData.updateQuestion(context: context)}, label: {
                     HStack{
                         Spacer()
                         Text("更新")

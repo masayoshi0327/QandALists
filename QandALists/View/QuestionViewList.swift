@@ -10,6 +10,8 @@ import SwiftUI
 struct QuestionViewList: View {
     
     var item : Question
+    var content: String?
+    var date: Date?
     @StateObject var answerData = QuestionController()
     
     var body: some View {
@@ -18,7 +20,7 @@ struct QuestionViewList: View {
             
             VStack{
                 HStack{
-                    Text(item.content ?? "")
+                    Text(content ?? "")
                         .font(.title2)
                         .foregroundColor(.black)
                     Spacer()
@@ -26,7 +28,7 @@ struct QuestionViewList: View {
                 
                 HStack{
                     Spacer()
-                    Text(item.date ?? Date(), style: .date)
+                    Text(date ?? Date(), style: .date)
                         .foregroundColor(.gray)
                 }
             }

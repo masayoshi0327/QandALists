@@ -37,7 +37,7 @@ struct QuestionView: View {
                         
                             ForEach(results){q in
                                 
-                                QuestionViewList(item: q)
+                                QuestionViewList(item: q, content: q.content, date: q.date)
                                     .contextMenu(ContextMenu(menuItems: {
                                         Button(action: {
                                             questionData.moveQuestionEditor(item: q)
