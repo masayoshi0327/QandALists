@@ -31,6 +31,7 @@
 		C4BD9B0B25D67D440050F594 /* ThirdPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD9B0A25D67D440050F594 /* ThirdPage.swift */; };
 		C4BD9B1025D67D800050F594 /* FourthPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD9B0F25D67D800050F594 /* FourthPage.swift */; };
 		C4CF170125DA9175007ABEAF /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF170025DA9175007ABEAF /* Description.swift */; };
+		C4CF170925DAA962007ABEAF /* FifthPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF170825DAA962007ABEAF /* FifthPage.swift */; };
 		C4F1910A25CC26C8002DE1DF /* AnswerViewCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F1910925CC26C8002DE1DF /* AnswerViewCount.swift */; };
 		C4F1910F25CC3101002DE1DF /* QuestionViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F1910E25CC3101002DE1DF /* QuestionViewButton.swift */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,7 @@
 		C4BD9B0A25D67D440050F594 /* ThirdPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPage.swift; sourceTree = "<group>"; };
 		C4BD9B0F25D67D800050F594 /* FourthPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthPage.swift; sourceTree = "<group>"; };
 		C4CF170025DA9175007ABEAF /* Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
+		C4CF170825DAA962007ABEAF /* FifthPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthPage.swift; sourceTree = "<group>"; };
 		C4F1910925CC26C8002DE1DF /* AnswerViewCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewCount.swift; sourceTree = "<group>"; };
 		C4F1910E25CC3101002DE1DF /* QuestionViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,6 +212,7 @@
 				C4BD9B0F25D67D800050F594 /* FourthPage.swift */,
 				C46777F325D8A0E10003EF0F /* SecondPage.swift */,
 				C4CF170025DA9175007ABEAF /* Description.swift */,
+				C4CF170825DAA962007ABEAF /* FifthPage.swift */,
 			);
 			path = Manuals;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				C492FED325BC11F1009E3F42 /* QuestionController.swift in Sources */,
 				C4BD9B1025D67D800050F594 /* FourthPage.swift in Sources */,
 				C4CF170125DA9175007ABEAF /* Description.swift in Sources */,
+				C4CF170925DAA962007ABEAF /* FifthPage.swift in Sources */,
 				C492FE9B25BC0E53009E3F42 /* Persistence.swift in Sources */,
 				C4BD9AE725D5E3780050F594 /* ManualView.swift in Sources */,
 				C492FEF725BD9386009E3F42 /* QuestionViewList.swift in Sources */,
