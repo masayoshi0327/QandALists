@@ -13,7 +13,8 @@ struct SecondPage: View {
             Text("わからないことを整理しよう")
                 .font(.title2)
             
-            
+            Image("HowToUse2-1")
+
             
         }
     }
