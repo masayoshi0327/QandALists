@@ -13,9 +13,9 @@ struct SecondPage: View {
             Text("わからないことを整理しよう")
                 .font(.title2)
             
-            Image("HowToUse2-1")
-
+            Description(imageNum: "2-1", description: "右下のボタンから新規作成画面に移動できます。")
             
+            Description(imageNum: "2-2", description: "自分が今調べたいと思っていること、疑問に思っていることを書き出しましょう。")
         }
     }
 }
