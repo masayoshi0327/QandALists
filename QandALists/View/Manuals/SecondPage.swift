@@ -12,6 +12,7 @@ struct SecondPage: View {
         VStack{
             Text("わからないことを整理しよう")
                 .font(.title2)
+                .fontWeight(.bold)
             
             Description(imageNum: "2-1", description: "右下のボタンから新規作成画面に移動できます。")
             
