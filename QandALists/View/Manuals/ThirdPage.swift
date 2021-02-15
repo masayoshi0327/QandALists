@@ -9,7 +9,17 @@ import SwiftUI
 
 struct ThirdPage: View {
     var body: some View {
-        Text("わからないをわかったに変えよう")
+        
+        VStack{
+            
+            Text("「わからない」を\n「わかった」に変えよう")
+                .font(.title2)
+                .fontWeight(.bold)
+            
+            Description(imageNum: "3-1", description: "リストのひとつひとつがボタンになっており、タップするとメモ画面に移動します。")
+            
+            Description(imageNum: "3-2", description: "「わからなかったこと」が解決したらメモをつけて「解決！」ボタンを押しましょう。わかったことリストに保存されます。")
+        }
     }
 }
 
