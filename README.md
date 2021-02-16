@@ -11,12 +11,12 @@
 <img src="QandALists/Assets.xcassets/HowToUse2-2.imageset/HowToUse2-2.png" width=30%>
 <img src="QandALists/Assets.xcassets/HowToUse3-1.imageset/HowToUse3-1.png" width=30%>
 
-② 解決した項目を選び、タップするとメモできる画面に遷移する。
+② 解決した項目を選び、タップするとメモできる画面に遷移する。  
 <img src="QandALists/Assets.xcassets/HowToUse3-2.imageset/HowToUse3-2.png" width=30%>
 
 ③ メモや参考にした記事のURLを書き、「解決！」ボタンを押す。
 
-④ わからないことリストから選んだ項目が消え、わかったことリストに保存されている。
+④ わからないことリストから選んだ項目が消え、わかったことリストに保存されている。  
 <img src="QandALists/Assets.xcassets/HowToUse4-1.imageset/HowToUse4-1.png" width=30%>
 
 ## 3.目指した課題解決
