@@ -6,17 +6,17 @@
 
 ## 2.利用方法
 
-1. わからないことリストに自分の疑問、課題をひとつずつリストアップする。  
+①わからないことリストに自分の疑問、課題をひとつずつリストアップする。  
 <img src="QandALists/Assets.xcassets/HowToUse2-1.imageset/HowToUse2-1.png" width=25%>
 <img src="QandALists/Assets.xcassets/HowToUse2-2.imageset/HowToUse2-2.png" width=25%>
 <img src="QandALists/Assets.xcassets/HowToUse3-1.imageset/HowToUse3-1.png" width=25%>
 
-1. 解決した項目を選び、タップするとメモできる画面に遷移する。  
+②解決した項目を選び、タップするとメモできる画面に遷移する。  
 <img src="QandALists/Assets.xcassets/HowToUse3-2.imageset/HowToUse3-2.png" width=25%>
 
-1. メモや参考にした記事のURLを書き、「解決！」ボタンを押す。
+③メモや参考にした記事のURLを書き、「解決！」ボタンを押す。
 
-1. わからないことリストから選んだ項目が消え、わかったことリストに保存されている。  
+④わからないことリストから選んだ項目が消え、わかったことリストに保存されている。  
 <img src="QandALists/Assets.xcassets/HowToUse4-1.imageset/HowToUse4-1.png" width=25%>
 
 ## 3.目指した課題解決
