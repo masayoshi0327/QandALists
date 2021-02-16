@@ -32,7 +32,7 @@
 - Questionテーブル（わからないこと）  
 
 Attribute | Type
-- | -
+-|-
 date | Date
 content | String
 
