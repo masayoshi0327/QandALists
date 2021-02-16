@@ -44,7 +44,7 @@
 
 ### 2.「わかったこと」のリスト数を表示  
 わかったことリスト画面にその数を表示した。自分がどれだけ勉強したか、成長できたかの指標になり、勉強のモチベーションになると考えたため。  
-<img src="QandALists/Assets.xcassets/HowToUse4-1-1.imageset/HowToUse4-1-1.png" width=25%>
+<img src="QandALists/Assets.xcassets/HowToUse4-1-1.imageset/HowToUse4-1-1.png" width=40%>
 
 ## 7.DB設計
 
