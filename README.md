@@ -30,8 +30,11 @@
 ## 5.DB設計
 
 - Questionテーブル（わからないこと）  
-date (Date)
-content (String)
+
+Attribute | Type
+- | -
+date | Date
+content | String
 
 - Answerテーブル（わかったこと）  
 date (Date)
