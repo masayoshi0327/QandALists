@@ -7,7 +7,7 @@
 ## 2.利用方法
 
 ① わからないことリストに自分の疑問、課題をひとつずつリストアップする。
-![画像](Assets.xcassets/HowToUse2-1.imageset/HowToUse2-1.png)
+![画像](QandALists/Assets.xcassets/HowToUse2-1.imageset/HowToUse2-1.png)
 
 ② 解決した項目を選び、タップするとメモできる画面に遷移する。
 
