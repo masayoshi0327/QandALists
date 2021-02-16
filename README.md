@@ -29,17 +29,19 @@
 
 ## 5.DB設計
 
-- Questionテーブル（わからないこと）  
+Questionテーブル（わからないこと）  
 
 Attribute | Type
 -|-
 date | Date
 content | String
 
-- Answerテーブル（わかったこと）  
-date (Date)
-title (String)
-solution (String)
-url (String)
+Answerテーブル（わかったこと）  
+Attribute | Type
+-|-
+date | Date
+title | String
+solution | String
+url | String
 
 関連付けはなし。AnswerのtitleはQuestionのcontentがそのまま入る仕様になっている（保存後に編集可能）。
