@@ -18,7 +18,7 @@ struct Description: View {
             Image("HowToUse\(imageNum)")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 140)
+                .frame(width: 100)
 
             Spacer()
             
