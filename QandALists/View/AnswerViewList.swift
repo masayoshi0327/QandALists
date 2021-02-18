@@ -18,16 +18,20 @@ struct AnswerViewList: View {
         
         VStack(alignment: .leading, spacing: 10, content: {
         
-            Text(title)
-                .fontWeight(.bold)
-            
-            Text(solution)
+            Group{
+                Text(title)
+                    .fontWeight(.bold)
+                
+                Text(solution)
+            }
+            .foregroundColor(.black)
             
             if url.isEmpty == false{
                 HStack{
                     
                     Image(systemName: "link")
                         .font(.caption)
+                        .foregroundColor(.black)
                     Link(destination: URL(string: url)!, label: {
                         Text(url)
                     })
