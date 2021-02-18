@@ -18,18 +18,18 @@ struct AnswerViewNew: View {
         Form{
             Section(header:
                 HStack{
-                Image(systemName: "lightbulb")
-                Text("説明")
-            }){
+                    Image(systemName: "lightbulb")
+                    Text("説明")
+                }){
                 TextEditor(text: $answerData.solution)
                     .frame(height: 140)
             }
             
             Section(header:
                 HStack{
-                Image(systemName: "link")
-                Text("参考記事")
-            }){
+                    Image(systemName: "link")
+                    Text("参考記事")
+                }){
                 TextField("記事のURLを貼り付け", text: $answerData.url)
             }
             Button(action: {answerData.saveAnswer(q: question, context: context)}, label: {
