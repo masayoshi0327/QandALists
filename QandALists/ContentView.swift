@@ -11,9 +11,9 @@ import CoreData
 struct ContentView: View {
     
     @AppStorage(wrappedValue: true, "isFirstLaunch") var isFirstLaunch
-
+    
     var body: some View {
-
+        
         TabView() {
             
             QuestionView()

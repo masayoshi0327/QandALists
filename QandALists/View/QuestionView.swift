@@ -17,7 +17,7 @@ struct QuestionView: View {
     @Environment(\.managedObjectContext) var context
     
     var body: some View {
-            
+        
         NavigationView{
             
             ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom), content: {
@@ -34,7 +34,7 @@ struct QuestionView: View {
                     ScrollView(showsIndicators: false){
                         
                         LazyVStack(spacing: 20){
-                        
+                            
                             ForEach(results){q in
                                 
                                 QuestionViewList(item: q, content: q.content, date: q.date)
@@ -68,7 +68,7 @@ struct QuestionView: View {
                         }
                     }
                 }
-            
+                
                 Button(action: {
                     questionData.content = ""
                     questionData.isNewData.toggle()

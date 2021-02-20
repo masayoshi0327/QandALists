@@ -21,14 +21,14 @@ struct FirstPage: View {
             (Text(app)
                 .fontWeight(.bold)
                 .foregroundColor(.yellow)
-            + Text("はあなただけの勉強サポートツールです。"))
+                + Text("はあなただけの勉強サポートツールです。"))
                 .padding()
-                
+            
             
             (Text(app)
                 .fontWeight(.bold)
                 .foregroundColor(.yellow)
-            + Text("の効果的な使い方について説明します。"))
+                + Text("の効果的な使い方について説明します。"))
                 .padding()
         }
         .frame(width: 300, height: 300)

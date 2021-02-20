@@ -41,7 +41,7 @@ class QuestionController : ObservableObject{
         }
     }
     func moveQuestionEditor(item: Question){
-            
+        
         updateItem = item
         date = item.date!
         content = item.content!
@@ -49,7 +49,7 @@ class QuestionController : ObservableObject{
     }
     
     func updateQuestion(context: NSManagedObjectContext){
-                    
+        
         updateItem.date = date
         updateItem.content = content
         
@@ -90,7 +90,7 @@ class QuestionController : ObservableObject{
     }
     
     func moveAnswerEditor(item: Answer){
-            
+        
         editAnswer = item
         title = item.title!
         solution = item.solution!
@@ -100,7 +100,7 @@ class QuestionController : ObservableObject{
     }
     
     func updateAnswer(context: NSManagedObjectContext){
-                    
+        
         editAnswer.title = title
         editAnswer.solution = solution
         editAnswer.url = url

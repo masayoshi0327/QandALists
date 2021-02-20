@@ -17,7 +17,7 @@ struct AnswerViewList: View {
     var body: some View {
         
         VStack(alignment: .leading, spacing: 10, content: {
-        
+            
             Group{
                 Text(title)
                     .fontWeight(.bold)

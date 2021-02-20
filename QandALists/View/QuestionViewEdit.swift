@@ -15,14 +15,14 @@ struct QuestionViewEdit: View {
     var body: some View {
         
         NavigationView{
-        
+            
             Form{
                 
                 Section(header:
-                    HStack{
-                    Image(systemName: "questionmark.circle")
-                    Text("課題")
-                }){
+                            HStack{
+                                Image(systemName: "questionmark.circle")
+                                Text("課題")
+                            }){
                     TextEditor(text: $questionData.content)
                         .frame(height: 140)
                 }

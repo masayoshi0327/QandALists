@@ -18,11 +18,11 @@ struct AnswerView: View {
     @Environment(\.managedObjectContext) var context
     
     var body: some View {
-            
+        
         VStack(alignment: .leading){
             
             HStack{
-            
+                
                 Text("わかったことリスト")
                     .font(.title)
                     .fontWeight(.bold)
@@ -33,12 +33,12 @@ struct AnswerView: View {
             }
             .padding(.top)
             .padding(.horizontal)
-
+            
             HStack{
                 TextField("タイトルを検索", text: $searchWord)
                 
                 if isKeyboardOpened{
-                
+                    
                     Button(action: {UIApplication.shared.closeKeyboard()}, label: {
                         Text("完了")
                     })
@@ -57,11 +57,11 @@ struct AnswerView: View {
             ScrollView{
                 
                 LazyVStack(spacing:10){
-                
+                    
                     ForEach(results){a in
                         
                         if a.title!.contains(searchWord) || searchWord.isEmpty{
-                        
+                            
                             AnswerViewList(title: a.title ?? "", solution: a.solution ?? "", url: a.url ?? "", date: a.date ?? Date())
                                 .contextMenu(ContextMenu(menuItems: {
                                     Button(action: {

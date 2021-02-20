@@ -15,7 +15,7 @@ struct ManualView: View {
     var body: some View {
         
         ZStack{
-        
+            
             TabView(selection: $selected) {
                 FirstPage().tag(1)
                 SecondPage().tag(2)
@@ -45,7 +45,7 @@ struct ManualView: View {
                     
                     //Next
                     VStack{
-                    
+                        
                         Image(systemName: "chevron.compact.right")
                             .font(.title)
                         Text("Next")
@@ -56,7 +56,7 @@ struct ManualView: View {
                 }
                 
                 Spacer()
-            
+                
                 HStack{
                     
                     ForEach(1..<6) { n in
@@ -70,14 +70,3 @@ struct ManualView: View {
         }
     }
 }
-
-//struct ManualView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Group {
-//            ManualView(closeManuals: true)
-//                .previewDevice(PreviewDevice(rawValue: "iPhone 11"))
-//            ManualView(closeManuals: true)
-//                .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
-//        }
-//    }
-//}

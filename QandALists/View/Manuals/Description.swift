@@ -14,12 +14,12 @@ struct Description: View {
     
     var body: some View {
         HStack{
-        
+            
             Image("HowToUse\(imageNum)")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 100)
-
+            
             Spacer()
             
             Text(description)

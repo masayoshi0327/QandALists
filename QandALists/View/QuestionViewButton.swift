@@ -13,7 +13,7 @@ struct QuestionViewButton: View {
         ZStack{
             
             VStack{
-            
+                
                 Image(systemName: "plus")
                     .resizable()
                     .frame(width: 30, height: 30)
