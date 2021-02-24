@@ -27,33 +27,33 @@ struct ManualView: View {
             
             VStack{
                 
-                Spacer()
-                
-                
-                HStack{
-                    //Back
-                    VStack{
-                        Image(systemName: "chevron.compact.left")
-                            .font(.title)
-                        Text("Back")
-                            .font(.caption)
-                    }
-                    .padding()
-                    .foregroundColor(selected == 1 ? .clear:.gray)
-                    
-                    Spacer()
-                    
-                    //Next
-                    VStack{
-                        
-                        Image(systemName: "chevron.compact.right")
-                            .font(.title)
-                        Text("Next")
-                            .font(.caption)
-                    }
-                    .padding()
-                    .foregroundColor(selected == 5 ? .clear:.gray)
-                }
+//                Spacer()
+//
+//                
+//                HStack{
+//                    //Back
+//                    VStack{
+//                        Image(systemName: "chevron.compact.left")
+//                            .font(.title)
+//                        Text("Back")
+//                            .font(.caption)
+//                    }
+//                    .padding()
+//                    .foregroundColor(selected == 1 ? .clear:.gray)
+//
+//                    Spacer()
+//
+//                    //Next
+//                    VStack{
+//
+//                        Image(systemName: "chevron.compact.right")
+//                            .font(.title)
+//                        Text("Next")
+//                            .font(.caption)
+//                    }
+//                    .padding()
+//                    .foregroundColor(selected == 5 ? .clear:.gray)
+//                }
                 
                 Spacer()
                 
