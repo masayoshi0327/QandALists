@@ -20,67 +20,85 @@ struct QuestionView: View {
         
         NavigationView{
             
-            ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom), content: {
+            VStack{
                 
-                if results.isEmpty{
-                    VStack{
-                        Spacer()
-                        Text("わからないことを整理しましょう")
-                        Spacer()
-                    }
-                    .frame(maxWidth: .infinity, alignment: .center)
+                HStack{
+                
+                    Button(action: {}, label: {
+                        VStack{
+                            Image(systemName: "questionmark.circle")
+                            Text("使い方")
+                                .font(.caption)
+                        }
+                        .foregroundColor(.gray)
+                    })
+                    
+                    Spacer()
                 }
-                else{
-                    ScrollView(showsIndicators: false){
-                        
-                        LazyVStack(spacing: 20){
+                .padding(.horizontal)
+                
+                ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom), content: {
+                    
+                    if results.isEmpty{
+                        VStack{
+                            Spacer()
+                            Text("わからないことを整理しましょう")
+                            Spacer()
+                        }
+                        .frame(maxWidth: .infinity, alignment: .center)
+                    }
+                    else{
+                        ScrollView(showsIndicators: false){
                             
-                            ForEach(results){q in
+                            LazyVStack(spacing: 20){
                                 
-                                QuestionViewList(item: q, content: q.content, date: q.date)
-                                    .contextMenu(ContextMenu(menuItems: {
-                                        Button(action: {
-                                            questionData.moveQuestionEditor(item: q)
-                                        }, label: {
-                                            Text("編集")
-                                        })
-                                        Button(action: {
-                                            deleteItem = q
-                                            deleteAlert = true
-                                        }, label: {
-                                            Text("削除")
-                                        })
-                                    }))
-                                    .sheet(isPresented: $questionData.isUpdateData, content: {
-                                        QuestionViewEdit(questionData: questionData)
-                                    })
+                                ForEach(results){q in
                                     
-                                    .alert(isPresented: $deleteAlert, content: {
-                                        Alert(title: Text("削除しますか？"), primaryButton: .destructive(Text("はい"), action: {
-                                            context.delete(deleteItem!)
-                                            try! context.save()
-                                            deleteItem = nil
-                                        }), secondaryButton: .cancel(Text("キャンセル"), action: {
-                                            deleteAlert = false
+                                    QuestionViewList(item: q, content: q.content, date: q.date)
+                                        .contextMenu(ContextMenu(menuItems: {
+                                            Button(action: {
+                                                questionData.moveQuestionEditor(item: q)
+                                            }, label: {
+                                                Text("編集")
+                                            })
+                                            Button(action: {
+                                                deleteItem = q
+                                                deleteAlert = true
+                                            }, label: {
+                                                Text("削除")
+                                            })
                                         }))
-                                    })
+                                        .sheet(isPresented: $questionData.isUpdateData, content: {
+                                            QuestionViewEdit(questionData: questionData)
+                                        })
+                                        
+                                        .alert(isPresented: $deleteAlert, content: {
+                                            Alert(title: Text("削除しますか？"), primaryButton: .destructive(Text("はい"), action: {
+                                                context.delete(deleteItem!)
+                                                try! context.save()
+                                                deleteItem = nil
+                                            }), secondaryButton: .cancel(Text("キャンセル"), action: {
+                                                deleteAlert = false
+                                            }))
+                                        })
+                                }
                             }
                         }
                     }
-                }
-                
-                Button(action: {
-                    questionData.content = ""
-                    questionData.isNewData.toggle()
-                }, label: {
-                    QuestionViewButton()
+                    
+                    Button(action: {
+                        questionData.content = ""
+                        questionData.isNewData.toggle()
+                    }, label: {
+                        QuestionViewButton()
+                    })
+                    .sheet(isPresented: $questionData.isNewData, content: {
+                        QuestionViewNew(questionData: questionData)
+                    })
+                    .padding()
                 })
-                .sheet(isPresented: $questionData.isNewData, content: {
-                    QuestionViewNew(questionData: questionData)
-                })
-                .padding()
-            })
-            .navigationTitle("わからないことリスト")
+                .navigationTitle("わからないことリスト")
+            }
         }
     }
 }
