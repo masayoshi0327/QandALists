@@ -12,6 +12,7 @@ struct QuestionView: View {
     
     @State var deleteAlert = false
     @State var deleteItem : Question? = nil
+    @Binding var needManual: Bool
     @StateObject var questionData = QuestionController()
     @FetchRequest(entity: Question.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: true)],animation: .spring()) var results : FetchedResults<Question>
     @Environment(\.managedObjectContext) var context
@@ -24,7 +25,7 @@ struct QuestionView: View {
                 
                 HStack{
                 
-                    Button(action: {}, label: {
+                    Button(action: {needManual.toggle()}, label: {
                         VStack{
                             Image(systemName: "questionmark.circle")
                             Text("使い方")

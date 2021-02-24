@@ -16,7 +16,7 @@ struct ContentView: View {
         
         TabView() {
             
-            QuestionView()
+            QuestionView(needManual: $isFirstLaunch)
                 .tabItem {Image(systemName: "questionmark.circle.fill")}.tag(1)
             AnswerView()
                 .tabItem {Image(systemName: "lightbulb.fill")}.tag(2)
