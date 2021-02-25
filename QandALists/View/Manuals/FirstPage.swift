@@ -9,8 +9,6 @@ import SwiftUI
 
 struct FirstPage: View {
     
-    let app = "わかりすと"
-    
     var body: some View {
         
         VStack(alignment: .center){
@@ -18,21 +16,25 @@ struct FirstPage: View {
                 .font(.title)
                 .padding()
             
-            (Text(app)
-                .fontWeight(.bold)
-                .foregroundColor(.yellow)
-                + Text("はあなただけの勉強サポートツールです。"))
-                .padding()
-            
-            
-            (Text(app)
-                .fontWeight(.bold)
-                .foregroundColor(.yellow)
-                + Text("の効果的な使い方について説明します。"))
-                .padding()
+            DescriptionText(addText: "はあなただけの勉強サポートツールです。")
+                        
+            DescriptionText(addText: "の効果的な使い方について説明します。")
         }
         .frame(width: 300, height: 300)
         .lineSpacing(5)
+    }
+}
+
+struct DescriptionText: View {
+    
+    let addText: String
+    
+    var body: some View {
+        (Text("わかりすと")
+            .fontWeight(.bold)
+            .foregroundColor(.yellow)
+            + Text(addText))
+            .padding()
     }
 }
 
