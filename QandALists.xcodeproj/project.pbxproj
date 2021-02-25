@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C441425425E792BE004191A0 /* SixthPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C441425325E792BD004191A0 /* SixthPage.swift */; };
 		C46777F425D8A0E10003EF0F /* SecondPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46777F325D8A0E10003EF0F /* SecondPage.swift */; };
 		C492FE9225BC0E51009E3F42 /* QandAListsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FE9125BC0E51009E3F42 /* QandAListsApp.swift */; };
 		C492FE9425BC0E51009E3F42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492FE9325BC0E51009E3F42 /* ContentView.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C441425325E792BD004191A0 /* SixthPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthPage.swift; sourceTree = "<group>"; };
 		C46777F325D8A0E10003EF0F /* SecondPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPage.swift; sourceTree = "<group>"; };
 		C492FE8E25BC0E51009E3F42 /* QandALists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QandALists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C492FE9125BC0E51009E3F42 /* QandAListsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QandAListsApp.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				C46777F325D8A0E10003EF0F /* SecondPage.swift */,
 				C4CF170025DA9175007ABEAF /* Description.swift */,
 				C4CF170825DAA962007ABEAF /* FifthPage.swift */,
+				C441425325E792BD004191A0 /* SixthPage.swift */,
 			);
 			path = Manuals;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			files = (
 				C492FF4E25C2C0EA009E3F42 /* AnswerViewEdit.swift in Sources */,
 				C4BD9AF625D67D000050F594 /* FirstPage.swift in Sources */,
+				C441425425E792BE004191A0 /* SixthPage.swift in Sources */,
 				C4BD9AB925D115470050F594 /* QuestionViewEdit.swift in Sources */,
 				C492FED325BC11F1009E3F42 /* QuestionController.swift in Sources */,
 				C4BD9B1025D67D800050F594 /* FourthPage.swift in Sources */,

@@ -21,7 +21,8 @@ struct ManualView: View {
                 SecondPage().tag(2)
                 ThirdPage().tag(3)
                 FourthPage().tag(4)
-                FifthPage(closeManuals: $closeManuals).tag(5)
+                FifthPage().tag(5)
+                SixthPage(closeManuals: $closeManuals).tag(6)
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             
@@ -29,7 +30,7 @@ struct ManualView: View {
                 
 //                Spacer()
 //
-//                
+//
 //                HStack{
 //                    //Back
 //                    VStack{
@@ -59,7 +60,7 @@ struct ManualView: View {
                 
                 HStack{
                     
-                    ForEach(1..<6) { n in
+                    ForEach(1..<7) { n in
                         Text("\(n)")
                             .padding()
                             .font(n == selected ? .title2:.headline)

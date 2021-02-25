@@ -9,25 +9,15 @@ import SwiftUI
 
 struct FifthPage: View {
     
-    @Binding var closeManuals: Bool
-    
     var body: some View {
         
         VStack{
-            Text("さあ、勉強を始めましょう！")
+            Text("その他の機能")
                 .font(.title2)
+                .fontWeight(.bold)
             
-            
-            Spacer()
-            
-            Button(action: {closeManuals.toggle()}, label: {
-                Text("スタート")
-                    .font(.title)
-                    .foregroundColor(.yellow)
-                    .fontWeight(.bold)
-            })
+            Description(imageNum: "5-1", description: "各リストを長押しするとメニューが現れます。メニューから編集、削除ができます。")
         }
-        .frame(height: 100)
     }
 }
 
