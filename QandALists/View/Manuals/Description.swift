@@ -18,13 +18,13 @@ struct Description: View {
             Image("HowToUse\(imageNum)")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 100)
+                .frame(width: 110)
             
             Spacer()
             
             Text(description)
         }
-        .frame(width: 280)
+        .frame(width: 340)
     }
 }
 
