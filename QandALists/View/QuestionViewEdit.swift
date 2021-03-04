@@ -9,7 +9,7 @@ import SwiftUI
 
 struct QuestionViewEdit: View {
     
-    @ObservedObject var questionData : QuestionController
+    @ObservedObject var questionData: QuestionController
     @Environment(\.managedObjectContext) var context
     
     var body: some View {

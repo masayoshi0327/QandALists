@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnswerViewCount: View {
     
-    var count : Int
+    var count: Int
     
     var body: some View {
         VStack{

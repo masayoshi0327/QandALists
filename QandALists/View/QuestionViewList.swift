@@ -9,7 +9,7 @@ import SwiftUI
 
 struct QuestionViewList: View {
     
-    var item : Question
+    var item: Question
     var content: String?
     var date: Date?
     @StateObject var answerData = QuestionController()

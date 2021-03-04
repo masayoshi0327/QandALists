@@ -9,8 +9,8 @@ import SwiftUI
 
 struct AnswerViewNew: View {
     
-    var question : Question
-    @ObservedObject var answerData : QuestionController
+    var question: Question
+    @ObservedObject var answerData: QuestionController
     @Environment(\.managedObjectContext) var context
     
     var body: some View {

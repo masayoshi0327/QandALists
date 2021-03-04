@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnswerViewEdit: View {
     
-    @ObservedObject var answerData : QuestionController
+    @ObservedObject var answerData: QuestionController
     @Environment(\.managedObjectContext) var context
     
     var body: some View {

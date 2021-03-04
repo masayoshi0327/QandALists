@@ -9,10 +9,10 @@ import SwiftUI
 
 struct AnswerViewList: View {
     
-    var title : String
-    var solution : String
-    var url : String
-    var date : Date
+    var title: String
+    var solution: String
+    var url: String
+    var date: Date
     
     var body: some View {
         
