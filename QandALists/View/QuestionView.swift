@@ -11,7 +11,7 @@ import CoreData
 struct QuestionView: View {
     
     @State var deleteAlert = false
-    @State var deleteItem : Question? = nil
+    @State var deleteItem: Question? = nil
     @Binding var needManual: Bool
     @StateObject var questionData = QuestionController()
     @FetchRequest(entity: Question.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: true)],animation: .spring()) var results : FetchedResults<Question>

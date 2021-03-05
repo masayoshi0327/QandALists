@@ -12,7 +12,7 @@ struct AnswerView: View {
     @State var searchWord:String = ""
     @State var isKeyboardOpened = false
     @State var deleteAlert = false
-    @State var deleteItem : Answer? = nil
+    @State var deleteItem: Answer? = nil
     @StateObject var answerData = QuestionController()
     @FetchRequest(entity: Answer.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)],animation: .spring()) var results : FetchedResults<Answer>
     @Environment(\.managedObjectContext) var context
